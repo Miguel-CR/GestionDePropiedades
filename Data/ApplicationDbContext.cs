@@ -8,7 +8,6 @@ namespace GestionDePropiedades.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-
         public DbSet<PropertyType> PropertyTypes { get; set; }
         public DbSet<Owner> Owners { get; set; }
         public DbSet<Property> Properties { get; set; }

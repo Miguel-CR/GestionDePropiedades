@@ -32,8 +32,7 @@ namespace GestionDePropiedades.Repository
 
         public void Update(T entity)
         {
-            _dbSet.Attach(entity);
-            _context.Entry(entity).State = EntityState.Modified;
+            _dbSet.Update(entity);
             _context.SaveChanges();
         }
 
