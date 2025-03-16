@@ -18,9 +18,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Property\" />
-    <Folder Include="Views\Owner\" />
-  </ItemGroup>
-
 </Project>

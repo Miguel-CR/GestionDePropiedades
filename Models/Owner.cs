@@ -18,7 +18,7 @@ namespace GestionDePropiedades.Models
 
         [EmailAddress(ErrorMessage = "El email no es válido.")]
         [MaxLength(255, ErrorMessage = "El Email debe de tener máximo 255 caracteres")]
-        public string Email { get; set; }
+        public string? Email { get; set; } = null;
 
         [Required(ErrorMessage = "El identificador del numero es requerido.")]
         [MaxLength(255, ErrorMessage = "El identificador del numero debe de tener máximo 255 caracteres")]
@@ -26,6 +26,6 @@ namespace GestionDePropiedades.Models
 
         [MaxLength(255, ErrorMessage = "La dirección debe de tener máximo 255 caracteres")]
 
-        public string Address { get; set; }
+        public string? Address { get; set; }= null;
     }
 }

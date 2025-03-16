@@ -9,13 +9,15 @@ namespace GestionDePropiedades.Models
         [Required]
         public int Id { get; set; }
 
-        [ForeignKey("PropertyType")]
+        [Required]
         public int PropertyTypeId { get; set; }
-        public virtual PropertyType PropertyType { get; set; }
+        [ForeignKey("PropertyTypeId")]
+        public virtual PropertyType PropertyType { get; set; } = null!;
 
-        [ForeignKey("Owner")]
+        [Required]
         public int OwnerId { get; set; }
-        public virtual Owner Owner { get; set; }
+        [ForeignKey("OwnerId")]
+        public virtual Owner Owner { get; set; } = null!;
 
         [Required(ErrorMessage = "El número es requerido.")]
         [MaxLength(255, ErrorMessage = "El número debe de tener máximo 255 caracteres")]
@@ -30,6 +32,6 @@ namespace GestionDePropiedades.Models
         public decimal Area { get; set; }
 
         [Column(TypeName = "decimal(18, 2)")]
-        public decimal ConstructionArea { get; set; }
+        public decimal? ConstructionArea { get; set; } = null;
     }
 }

@@ -10,10 +10,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped(typeof(IRepositoryProperty), typeof(RepositoryProperty));
 
 builder.Services.AddScoped<IService<PropertyType>, PropertyTypeService>();
 builder.Services.AddScoped<IService<Owner>, OwnerService>();
-builder.Services.AddScoped<IService<Property>, PropertyService>();
+builder.Services.AddScoped<IServiceProperty, PropertyService>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

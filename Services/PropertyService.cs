@@ -1,15 +1,20 @@
-﻿using GestionDePropiedades.Models;
+﻿using GestionDePropiedades.Data;
+using GestionDePropiedades.Models;
 using GestionDePropiedades.Repository;
+using Microsoft.EntityFrameworkCore;
 
 namespace GestionDePropiedades.Services
 {
-    public class PropertyService : IService<Property>
+    public class PropertyService : IServiceProperty
     {
         private readonly IRepository<Property> _propertyRepository;
+        private readonly IRepositoryProperty _repositoryPropertyData;
+        private readonly ApplicationDbContext _context;
 
-        public PropertyService(IRepository<Property> propertyRepository)
+        public PropertyService(IRepository<Property> propertyRepository,IRepositoryProperty repositoryPropertyData)
         {
             _propertyRepository = propertyRepository;
+            _repositoryPropertyData = repositoryPropertyData;
         }
 
         public IEnumerable<Property> GetAll()
@@ -35,6 +40,11 @@ namespace GestionDePropiedades.Services
         public void Delete(int id)
         {
             _propertyRepository.Delete(id);
+        }
+
+        public IEnumerable<Property> GetAllProperties()
+        {
+            return _repositoryPropertyData.GetAllProperties();
         }
     }
 }
