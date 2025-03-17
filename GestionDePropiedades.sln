@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35806.99 d17.13
+VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDePropiedades", "GestionDePropiedades.csproj", "{8F1E22BD-DCE1-1B65-8227-1CC7C39E119C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDePropiedades.Tests", "..\GestionDePropiedades.Tests\GestionDePropiedades.Tests.csproj", "{BE9DDDC3-E011-45F1-9DF2-07D35BB635BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8F1E22BD-DCE1-1B65-8227-1CC7C39E119C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F1E22BD-DCE1-1B65-8227-1CC7C39E119C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F1E22BD-DCE1-1B65-8227-1CC7C39E119C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE9DDDC3-E011-45F1-9DF2-07D35BB635BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE9DDDC3-E011-45F1-9DF2-07D35BB635BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE9DDDC3-E011-45F1-9DF2-07D35BB635BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE9DDDC3-E011-45F1-9DF2-07D35BB635BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
